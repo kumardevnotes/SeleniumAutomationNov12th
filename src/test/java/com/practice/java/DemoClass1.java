@@ -3,7 +3,7 @@ package com.practice.java;
 public class DemoClass1 {
 	
 	public static void main(String[] args) {
-		
+		//default Data types in java
 		System.out.println("Emp Details:");
 		int empID = 1001; //Integer data - 0, 1 , 100, -1, -200
 		String empName ="John Legend"; //collection of chars
