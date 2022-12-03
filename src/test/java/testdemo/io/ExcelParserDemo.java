@@ -1,4 +1,4 @@
-package java.file.io.demo;
+package testdemo.io;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,7 +18,7 @@ public class ExcelParserDemo {
 	public static void main(String[] args) throws Exception {
 		
 		
-String rootPath = System.getProperty("user.dir");
+     String rootPath = System.getProperty("user.dir");
 		
 		 fileInputStream = new FileInputStream(new File(rootPath + "//src//test//resources//TestData.xlsx")); 
 
@@ -31,11 +31,11 @@ String rootPath = System.getProperty("user.dir");
 		
 		fileOutputStream = new FileOutputStream(new File(rootPath + "//src//test//resources//TestData.xlsx"));
 		
-		sheet.getRow(1).getCell(2).setCellValue("newPassword8877");
+		sheet.getRow(2).getCell(2).setCellValue("mylatestpwd1122");
 		
 		workbook.write(fileOutputStream);
 		
-		System.out.println("Updated Value: "+ sheet.getRow(1).getCell(2).toString());
+		System.out.println("Updated Value: "+ sheet.getRow(2).getCell(2).toString());
 	}
 
 }
