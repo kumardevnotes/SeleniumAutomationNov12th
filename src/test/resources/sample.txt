@@ -1,1 +1,9 @@
 new data has been added into this text doc
+
+git status
+git fetch origin
+git pull
+
+
+
+git reset --hard
