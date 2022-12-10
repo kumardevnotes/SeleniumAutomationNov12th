@@ -17,7 +17,7 @@ public class StringDemo {
 		System.out.println(city.equals("NewJersy")); //false
 		System.out.println(city.equalsIgnoreCase("NEWYORK")); //true
 		System.out.println(city.length());
-		System.out.println(city.isBlank()); //false
+		//System.out.println(city.isBlank()); //false
 		
 		city = "  NewYork  "; 
 		System.out.println(city);
