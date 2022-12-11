@@ -4,6 +4,12 @@
   <artifactId>SeleniumAutomationNov12th</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
+  
+  <dependency>
+    <groupId>com.github.javafaker</groupId>
+    <artifactId>javafaker</artifactId>
+    <version>1.0.2</version>
+</dependency>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
