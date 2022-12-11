@@ -14,7 +14,25 @@ public class SeleniumDemo {
 		// Below method will launch chrome and launch the application
 		// https://www.speaklanguages.com/
 
-		launchChromeandLaunchApp("https://mail.rediff.com/cgi-bin/login.cgi");
+		
+		System.out.println("Launch the selenium script");
+
+		// To get the root folder
+		String rootFolder = System.getProperty("user.dir");
+
+		// Need to setProperty with driver file, before you run the script
+		System.setProperty("webdriver.chrome.driver", rootFolder + "//src//test//resources//chromedriver.exe");
+
+		driver = new ChromeDriver(); // it opens a chrome browser
+
+		// maximize browser
+		driver.manage().window().maximize();
+
+		// launching my app as shown below
+		driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
+
+		Thread.sleep(3000); // 3000ms == 3seconds
+
 
 		// Click on sign in to enable the Alert box on the screen
 		driver.findElement(By.name("proceed")).click();
@@ -73,28 +91,9 @@ public class SeleniumDemo {
 		 * //closing the browser finally
 		 */
 		driver.quit();
+		
+		System.out.println("Completed selenium script");
 	}
 
-	public static void launchChromeandLaunchApp(String application) throws Exception {
-		System.out.println("Launch the selenium script");
-
-		// To get the root folder
-		String rootFolder = System.getProperty("user.dir");
-
-		// Need to setProperty with driver file, before you run the script
-		System.setProperty("webdriver.chrome.driver", rootFolder + "//src//test//resources//chromedriver.exe");
-
-		driver = new ChromeDriver(); // it opens a chrome browser
-
-		// maximize browser
-		driver.manage().window().maximize();
-
-		// launching my app as shown below
-		driver.get(application);
-
-		Thread.sleep(3000); // 3000ms == 3seconds
-
-		System.out.println("Selenium script finished");
-	}
 
 }
