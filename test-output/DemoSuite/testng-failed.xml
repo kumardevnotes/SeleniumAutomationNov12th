@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [DemoSuite]" guice-stage="DEVELOPMENT">
-  <parameter name="browser" value="Edge"/>
-  <test thread-count="5" name="Smoke(failed)">
-    <groups>
-      <run>
-        <include name="Smoke"/>
-        <include name="Regression"/>
-      </run>
-    </groups>
+<suite thread-count="2" parallel="methods" name="Failed suite [DemoSuite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="Chrome"/>
+  <test thread-count="2" parallel="methods" name="Smoke(failed)">
     <classes>
-      <class name="com.testng.demo.TestNGDemo">
+      <class name="com.testng.demo.MyTestNgDemo">
         <methods>
-          <include name="verifySignupLaunch"/>
-          <include name="setUp"/>
+          <include name="verifyHomePageTitle"/>
           <include name="tearDown"/>
+          <include name="verifyLoginPageTitle"/>
+          <include name="setup"/>
+          <include name="verifyLoginPageTitle2"/>
         </methods>
-      </class> <!-- com.testng.demo.TestNGDemo -->
+      </class> <!-- com.testng.demo.MyTestNgDemo -->
     </classes>
   </test> <!-- Smoke(failed) -->
 </suite> <!-- Failed suite [DemoSuite] -->

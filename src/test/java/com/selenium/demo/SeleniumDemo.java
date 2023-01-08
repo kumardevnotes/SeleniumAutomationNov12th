@@ -32,7 +32,7 @@ public class SeleniumDemo {
 		driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
 
 		Thread.sleep(3000); // 3000ms == 3seconds
-
+	
 
 		// Click on sign in to enable the Alert box on the screen
 		driver.findElement(By.name("proceed")).click();

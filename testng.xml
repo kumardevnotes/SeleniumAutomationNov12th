@@ -1,17 +1,17 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
   
-<suite name="DemoSuite" verbose="1" >
-<parameter name="browser"  value="Edge"/>
+<suite name="DemoSuite" verbose="1" parallel="methods" thread-count="2">
+<parameter name="browser"  value="Chrome"/>
   <test name="Smoke" >
-   <groups>
+   <!-- groups>
     <run>
       <include name="Smoke"/>
       <include name="Regression"/>
     </run>
-  </groups>
+  </groups -->
 
     <classes>
-       <class name="com.testng.demo.TestNGDemo" />
+       <class name="com.testng.demo.MyTestNgDemo" />
        <!-- class name="com.testng.demo.TestNGDemo2" / -->
     </classes>
   </test>
